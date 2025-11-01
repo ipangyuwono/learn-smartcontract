@@ -2,6 +2,12 @@
 
 **TreeToken** adalah smart contract berbasis Algorand (menggunakan ARC4) yang memungkinkan pembuatan, pengelolaan, dan perdagangan pohon digital dalam ekosistem blockchain. Kontrak ini mensimulasikan siklus hidup pohon digital, mulai dari penanaman, penyiraman, hingga perdagangan token pohon.
 
+Application ID : 748956158
+
+Application Address : KLKR7IEP23HBQSGNY332MITJWMTLUXIK6GJM52I5STX5UPK7D7BZDQXOAM
+
+Application Name : TreeToken
+
 **01**⚡ Fitur Utama
 
 * **Penanaman Pohon (Plant Tree)**
