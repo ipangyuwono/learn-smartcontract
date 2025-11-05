@@ -1,52 +1,35 @@
-# 🌳 TreeToken Smart Contract
-
-**TreeToken** adalah smart contract berbasis Algorand (menggunakan ARC4) yang memungkinkan pembuatan, pengelolaan, dan perdagangan pohon digital dalam ekosistem blockchain. Kontrak ini mensimulasikan siklus hidup pohon digital, mulai dari penanaman, penyiraman, hingga perdagangan token pohon.
-
+🌳 TreeToken Smart Contract
+TreeToken is an Algorand-based smart contract (using ARC4) that enables the creation, management, and trading of digital trees within a blockchain ecosystem. This contract simulates the lifecycle of a digital tree, from planting and watering to trading the tree token.
 Application ID : 748956158
-
 Application Address : KLKR7IEP23HBQSGNY332MITJWMTLUXIK6GJM52I5STX5UPK7D7BZDQXOAM
-
 Application Name : TreeToken
-
-**01**⚡ Fitur Utama
-
-* **Penanaman Pohon (Plant Tree)**
-  Hanya owner (pembuat kontrak) yang bisa menanam pohon. Setiap penanaman mencatat timestamp terakhir pohon disiram.
-
-* **Penyiraman Pohon (Water Tree)**
-  Owner atau sistem dapat memperbarui timestamp terakhir pohon disiram, menunjukkan pohon tetap hidup.
-
-* **Pelacakan Pohon**
-
-  * `get_last_watered()` – Mendapatkan timestamp terakhir pohon disiram.
-  * `get_owner()` – Mendapatkan pemilik saat ini (default: creator).
-
-* **Perdagangan Pohon (Buy/Sell)**
-
-  * `list_for_sale(price)` – Menandai pohon untuk dijual dengan harga tertentu.
-  * `buy_tree(buyer, payment)` – Memindahkan kepemilikan pohon jika pembayaran mencukupi.
-**02** 🛠️ Teknologi
-
-* **Bahasa**: Python dengan Algopy (Framework ARC4)
-* **Blockchain**: Algorand
-* **Standar**: ARC4 (Algorand smart contract standard)
-
-**03** 📄 Cara Kerja
-
-1. **Inisialisasi Kontrak**
-   Saat kontrak dibuat, pohon belum ditanam (`is_planted = False`) dan tidak dijual.
-
-2. **Menanam Pohon**
-   Owner memanggil `plant_tree()`. Timestamp terakhir pohon disiram diset ke waktu saat ini.
-
-3. **Menyiram Pohon**
-   Owner memanggil `water_tree()` untuk memperbarui timestamp penyiraman.
-
-4. **Menjual dan Membeli Pohon**
-   Owner dapat memanggil `list_for_sale(price)` untuk menjual. Pembeli dapat membeli dengan `buy_tree(buyer, payment)` jika harga cukup.
-
+01⚡ Key Features
+ * Plant Tree (Penanaman Pohon)
+   Only the owner (contract creator) can plant a tree. Each planting records the last time the tree was watered via a timestamp.
+ * Water Tree (Penyiraman Pohon)
+   The owner or the system can update the last watered timestamp, indicating the tree remains alive.
+ * Tree Tracking (Pelacakan Pohon)
+   * get_last_watered() – Retrieves the timestamp of the last time the tree was watered.
+   * get_owner() – Retrieves the current owner (default: creator).
+ * Tree Trading (Perdagangan Pohon)
+   * list_for_sale(price) – Marks the tree for sale at a specific price.
+   * buy_tree(buyer, payment) – Transfers tree ownership if the payment is sufficient.
+02 🛠️ Technology
+ * Language: Python with Algopy (ARC4 Framework)
+ * Blockchain: Algorand
+ * Standard: ARC4 (Algorand smart contract standard)
+03 📄 How It Works
+ * Contract Initialization
+   When the contract is created, the tree is not yet planted (is_planted = False) and is not listed for sale.
+ * Planting the Tree (Menanam Pohon)
+   The owner calls plant_tree(). The last watered timestamp is set to the current time.
+ * Watering the Tree (Menyiram Pohon)
+   The owner calls water_tree() to update the watering timestamp.
+ * Selling and Buying the Tree (Menjual dan Membeli Pohon)
+   The owner can call list_for_sale(price) to sell. A buyer can purchase it with buy_tree(buyer, payment) if the price is met.
 🌱 Notes
-* Kontrak ini mensimulasikan pohon digital dan bisa dikembangkan lebih lanjut untuk:
-  * Integrasi reward untuk perawatan pohon
-  * NFT pohon unik untuk tiap token
-  * Pelacakan pertumbuhan pohon berbasis timestamp
+ * This contract simulates a digital tree and can be further developed for:
+   * Integration of rewards for tree maintenance
+   * Unique NFTs for each tree token
+   * Timestamp-based tree growth tracking
+Would you like me to elaborate on a specific feature, like the ARC4 standard or how the trading functions work?
